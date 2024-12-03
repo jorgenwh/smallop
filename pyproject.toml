@@ -3,8 +3,12 @@ name = "smallop"
 version = "0.1.0"
 description = ""
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.uv]
 dev-dependencies = [
@@ -13,9 +17,9 @@ dev-dependencies = [
 ]
 
 [tool.pyright]
-include = ["smallop", "tests"]
+include = ["smallop", "tests", "scripts"]
 exclude = []
-pythonVersion = "3.12"
+pythonVersion = "3.13"
 pythonPlatform = "Linux"
 reportGeneralTypeIssues = "error"
 reportMissingImports = "error" # Ensure that imports actually resolve to something
