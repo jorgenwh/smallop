@@ -1,0 +1,27 @@
+[project]
+name = "smallop"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "pyright === 1.1.389",
+    "pytest === 8.3.4",
+]
+
+[tool.pyright]
+include = ["smallop", "tests"]
+exclude = []
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+reportGeneralTypeIssues = "error"
+reportMissingImports = "error" # Ensure that imports actually resolve to something
+reportUnboundVariable = "error" # Ensure that we do not reference variables that dont exist.
+reportMatchNotExhaustive = "error" # Ensure that all enumerations of a matchable value are actually checked
+reportUnnecessaryComparison = "error" # Ensures that we avoid unneccesary branches/dead code
+reportUnnecessaryIsInstance = "error" # Ensures that we avoid unneccesary branches/dead code
+reportUnusedCallResult = "error" # This ensures that all result monads are checked
+
